@@ -1,0 +1,2 @@
+Hello! I am a beginner programmer with a passion for learning and exploring the world of coding. I'm currently diving into various programming languages and frameworks, eager to build my skills and create innovative projects. My goal is to become proficient in programming and contribute to exciting software development endeavors. I'm enthusiastic about collaborating with others and sharing knowledge as I embark on this journey in the tech industry.
+
