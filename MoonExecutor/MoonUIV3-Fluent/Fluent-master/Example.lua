@@ -3,8 +3,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/i
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/isMoons/MoonExecutorUI/refs/heads/main/MoonExecutor/MoonUIV3-Fluent/Fluent-master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Fluent " .. Fluent.Version,
-    SubTitle = "by dawid",
+    Title = "Moon INC " .. Fluent.Version,
+    SubTitle = "By isMoonss",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
