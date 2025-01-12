@@ -224,30 +224,6 @@ Tabs.AutoFarm:AddButton({
         })
     end
 })
-Tabs.AutoFarm:AddButton({
-    Title = "TestButtonV2",
-    Description = "Test",
-    Callback = function()
-        Window:Dialog({
-            Title = "Title",
-            Content = "This is a dialog",
-            Buttons = {
-                {
-                    Title = "Confirm",
-                    Callback = function()
-                        print("Confirmed the dialog.")
-                    end
-                },
-                {
-                    Title = "Cancel",
-                    Callback = function()
-                        print("Cancelled the dialog.")
-                    end
-                }
-            }
-        })
-    end
-})
 -- // NEW CODE TEST //
 Main:Notify({
     Title = "Fluent",
