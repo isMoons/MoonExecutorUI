@@ -199,7 +199,32 @@ do
     InterfaceSection:AddKeybind("MenuKeybind", { Title = "Minimize Bind", Default = "RightShift" })
     Main.MinimizeKeybind = Main.Options.MenuKeybind 
 end
-
+-- // NEW CODE TEST //
+Tabs.AutoFarm:AddButton({
+    Title = "Button",
+    Description = "Very important button",
+    Callback = function()
+        Window:Dialog({
+            Title = "Title",
+            Content = "This is a dialog",
+            Buttons = {
+                {
+                    Title = "Confirm",
+                    Callback = function()
+                        print("Confirmed the dialog.")
+                    end
+                },
+                {
+                    Title = "Cancel",
+                    Callback = function()
+                        print("Cancelled the dialog.")
+                    end
+                }
+            }
+        })
+    end
+})
+-- // NEW CODE TEST //
 Main:Notify({
     Title = "Fluent",
     Content = "The script has been loaded.",
