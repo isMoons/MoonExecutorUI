@@ -15,7 +15,7 @@ local Window = Rayfield:CreateWindow({
    },
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Arrayfield",
+      Title = "Moon's Hub",
       Subtitle = "Key System",
       Note = "Join the discord (https://discord.com/invite/A8R3krGESw)",
       FileName = "MoonsKey",
