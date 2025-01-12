@@ -202,7 +202,7 @@ end
 -- // NEW CODE TEST //
 Tabs.AutoFarm:AddButton({
     Title = "TestButton",
-    Description = "Tesssseeeereret",
+    Description = "Teewaederewst",
     Callback = function()
         Window:Dialog({
             Title = "Title",
