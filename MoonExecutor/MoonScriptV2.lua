@@ -1,4 +1,4 @@
-local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/isMoons/isMoons/refs/heads/main/MoonExecutor/MoonUIV2.lua"))()
+local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/isMoons/isMoons/refs/heads/main/MoonExecutor/MoonUI/MoonUIV2.lua"))()
 
 local Luxt = Luxtl.CreateWindow("Moons's HUB", 6105620301)
 
