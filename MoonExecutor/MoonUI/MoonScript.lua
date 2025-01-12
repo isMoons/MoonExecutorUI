@@ -1,24 +1,24 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/isMoons/isMoons/refs/heads/main/MoonExecutor/MoonUI/MoonUI.lua'))()
 local Window = Rayfield:CreateWindow({
-   Name = "Arrayfield Example Window",
+   Name = "Moon's Community",
    LoadingTitle = "Moon's Hub",
    LoadingSubtitle = "by isMoonss",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Arrayfield"
+      FileName = "Moons's Hub"
    },
    Discord = {
-      Enabled = false,
-      Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+      Enabled = true,
+      Invite = "https://discord.com/invite/A8R3krGESw", -- The Discord invite code, do not include discord.gg/
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
       Title = "Arrayfield",
       Subtitle = "Key System",
-      Note = "Join the discord (discord.gg/sirius)",
-      FileName = "SiriusKey",
+      Note = "Join the discord (https://discord.com/invite/A8R3krGESw)",
+      FileName = "MoonsKey",
       SaveKey = false,
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = "Hello"
