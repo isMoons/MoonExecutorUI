@@ -1,8 +1,8 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/isMoons/isMoons/refs/heads/main/MoonExecutor/MoonUI/MoonUI.lua'))()
 local Window = Rayfield:CreateWindow({
    Name = "Arrayfield Example Window",
-   LoadingTitle = "Arrayfield Interface Suite",
-   LoadingSubtitle = "by Arrays",
+   LoadingTitle = "Moon's Hub",
+   LoadingSubtitle = "by isMoonss",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = nil, -- Create a custom folder for your hub/game
