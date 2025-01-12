@@ -1,29 +1,62 @@
 
 local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 
-local PhantomForcesWindow = Library:NewWindow("Combat")
+local RS = game:GetService("ReplicatedStorage")
+local piles = workspace.Map.TreasurePiles
+local dig = RS.Source.Network.RemoteFunctions.Digging
 
-local KillingCheats = PhantomForcesWindow:NewSection("Kill Options")
+local plr = game.Players.LocalPlayer
+local playerPos = plr.Character.HumanoidRootPart.Position
 
-KillingCheats:CreateButton("Button", function()
-print("HI")
-end)
+_G.autodig = true
 
-KillingCheats:CreateTextbox("TextBox", function(text)
-        print(text)
-end)
+local function getClosestPile()
+    local closestPile = nil
+    local closestDist = 10
 
-KillingCheats:CreateToggle("Auto Ez", function(value)
-print(value)
-end)
+    for _, pile in pairs(piles:GetChildren()) do
+        if pile:IsA("Model") then
+            local pilePos = pile:GetPivot().Position
+            local distance = (pilePos - playerPos).Magnitude
+            if distance < closestDist then
+                closestPile = pile
+                closestDist = distance
+            end
+        end
+    end
 
-KillingCheats:CreateDropdown("DropDown", {"Hello", "World", "Hello World"}, 2, function(text)
-print(text)
-end)
+    return closestPile
+end
 
-KillingCheats:CreateSlider("Slider", 0, 100, 15, false, function(value)
-print(value)
- end)
-KillingCheats:CreateColorPicker("Picker", Color3.new(255, 255, 255), function(value)
-print(value)
-end)
+if not getClosestPile() then 
+	        game:GetService("ReplicatedStorage").Source.Network.RemoteFunctions.Digging:InvokeServer({
+            Command = "CreatePile"
+        })
+end
+
+while _G.autodig do
+    local closestPile = getClosestPile()
+
+    if closestPile then
+        local target = closestPile
+        local index = target.Name
+
+        repeat
+            task.wait()
+            if not piles:FindFirstChild(target.Name) then
+                target = nil
+                break
+            end
+
+            dig:InvokeServer({
+                Command = "DigPile",
+                TargetPileIndex = tonumber(index)
+            })
+
+        until not _G.autodig or not piles:FindFirstChild(target.Name)
+    else
+        game:GetService("ReplicatedStorage").Source.Network.RemoteFunctions.Digging:InvokeServer({
+            Command = "CreatePile"
+        })
+    end
+end
