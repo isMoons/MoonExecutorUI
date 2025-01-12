@@ -1,6 +1,6 @@
 -- config
 local repoName = "executor-gui"
-local repoOwner = "isMoonss"
+local repoOwner = "jLn0n"
 -- variables
 local http_request = (syn and syn.request) or (http and http.request) or request or http_request
 local wrapperEnv = {}
